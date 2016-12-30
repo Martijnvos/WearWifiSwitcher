@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frame_layout"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/startpage_wifilist_loading"
+        android:textSize="15sp"
+        android:layout_gravity="center_vertical"
+        android:paddingTop="50dp"
+        android:textAlignment="center"
+        android:id="@+id/startpage_wifilist_loading_round"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/startpage_wificonnection_ongoing"
+        android:textSize="15sp"
+        android:layout_gravity="center_vertical"
+        android:paddingTop="50dp"
+        android:textAlignment="center"
+        android:id="@+id/startpage_wificonnection_ongoing_round"
+        android:visibility="gone"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:layout_gravity="center_vertical|center"
+        android:paddingTop="40dp"
+        android:id="@+id/startpage_loading_animation_round"/>
+
+    <android.support.wearable.view.WearableListView
+        android:id="@+id/wifi_list_round"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:paddingStart="20dp"/>
+
+</FrameLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/bb_menu_connection_info"
+        icon="@drawable/ic_network_wifi_white_24dp"
+        title="@string/bottombar_connection_info_title"
+        barColorWhenSelected="@color/colorPrimary"/>
+
+    <tab
+        id="@+id/bb_menu_settings"
+        icon="@drawable/ic_settings_white_24dp"
+        title="@string/bottombar_settings_title"
+        barColorWhenSelected="@color/colorPrimary"/>
+
+    <tab
+        id="@+id/bb_menu_about"
+        icon="@drawable/ic_info_outline_white_24dp"
+        title="@string/bottombar_about_title"
+        barColorWhenSelected="@color/colorPrimary"/>
+</tabs>

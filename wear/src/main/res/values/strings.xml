@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Wear WifiSwitcher</string>
+
+    <string name="startpage_wifilist_loading">Getting Access Points...</string>
+    <string name="startpage_wificonnection_ongoing">Connecting to selected WiFi</string>
+
+    <string name="round_display">Round</string>
+    <string name="rectangular_display">Rectangular</string>
+
+    <string name="wifi_connected_message">Connected Successfully</string>
+    <string name="wifi_not_connected_message">Not Connected</string>
+</resources>

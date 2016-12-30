@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Wear WifiSwitcher</string>
+    <string name="banner_ad_unit_id">ca-app-pub-5302249533542732/7393213607</string>
+
+    <string name="alertdialog_home_title_close">Wifi state</string>
+    <string name="alertdialog_home_message_close">Before the app is closed: what would you like your wifi state to be?</string>
+    <string name="alertdialog_home_button_wifi_on">On</string>
+    <string name="alertdialog_home_button_wifi_off">Off</string>
+    <string name="alertdialog_home_button_back">Back</string>
+
+    <string name="actionbar_home_connection_info_title">WifiSwitcher</string>
+    <string name="textview_home_connected_title">SSID:</string>
+    <string name="textview_home_mac_address_title">MAC Address:</string>
+    <string name="textview_home_ip_address_title">IP Address:</string>
+    <string name="textview_home_link_speed_title">Link Speed:</string>
+    <string name="textview_home_network_id_title">Network ID:</string>
+    <string name="textview_home_signal_strength_title">Signal Strength:</string>
+    <string name="textview_home_wifi_frequency_title">Frequency:</string>
+    <string name="textview_home_not_connected">Not connected</string>
+    <string name="textview_home_connection_information">Connection Info</string>
+    <string name="textview_home_link_speed_loaded">%1$d Mbps</string>
+    <string name="textview_home_signal_strength_loaded">%1$d dBm</string>
+    <string name="textview_home_wifi_frequency_loaded">%1$d MHz</string>
+
+    <string name="bottombar_connection_info_title">Connection Info</string>
+    <string name="bottombar_settings_title">Settings</string>
+    <string name="bottombar_about_title">About</string>
+
+    <string name="location_permission_granted_text">Location permission granted</string>
+    <string name="location_permission_denied_text">Location permission denied</string>
+
+    <string name="textview_about_libraries_title">Libraries</string>
+    <string name="textview_bottombar_library">Bottombar\nIiro Krankka</string>
+    <string name="textview_about_app_title">About the app</string>
+    <string name="textview_about_app_text">I found it really annoying that my phone \'sticked\' to my range extender, which is terribly slow and unneeded when I\'m downstairs.
+    That\'s when I decided to built this utility app to help aid users with their WiFi annoyances.\nNot only does this app switch between WiFi networks without even touching your phone, it also acts as an information hub for your WiFi access points.\n\nAre you enjoying this app?\nLeave a good rating in the Play Store!\nIt is much appreciated.</string>
+
+    <string-array name="entries_refresh_rate_preference">
+        <item>Continuous</item>
+        <item>10 seconds</item>
+        <item>5 seconds</item>
+        <item>3 seconds</item>
+        <item>Default</item>
+    </string-array>
+
+    <string-array name="entryvalues_refresh_rate_preference">
+        <item>1</item>
+        <item>10</item>
+        <item>5</item>
+        <item>3</item>
+        <item>15</item>
+    </string-array>
+
+</resources>

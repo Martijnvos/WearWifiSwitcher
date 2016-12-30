@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+        android:key="exit_dialog_checkbox_preference"
+        android:title="Exit dialog"
+        android:summary="Show an exit dialog when back button is pressed"
+        android:defaultValue="true"/>
+
+    <ListPreference
+        android:key="refresh_interval_preference"
+        android:title="Refresh Intervals"
+        android:dialogTitle="Refresh Intervals"
+        android:summary="Refresh interval of the wifi connection information\nMAY REDUCE BATTERY LIFE"
+        android:entries="@array/entries_refresh_rate_preference"
+        android:entryValues="@array/entryvalues_refresh_rate_preference"
+        android:defaultValue="10"/>
+
+</PreferenceScreen>
