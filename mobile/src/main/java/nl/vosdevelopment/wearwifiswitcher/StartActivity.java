@@ -62,7 +62,7 @@ public class StartActivity extends AppCompatActivity {
         wifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
         assetManager = this.getAssets();
 
-        MobileAds.initialize(getApplicationContext(), "API KEY");
+        MobileAds.initialize(getApplicationContext(), "ADS KEY");
 
         if (findViewById(R.id.fragment_container) != null) {
 
