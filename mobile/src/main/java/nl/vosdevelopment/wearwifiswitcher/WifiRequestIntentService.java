@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
-import android.util.Log;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.wearable.Wearable;
@@ -27,9 +26,7 @@ public class WifiRequestIntentService extends IntentService {
         boolean scanWifiList = intent.getBooleanExtra("ScanWifiList", true);
 
         if(scanWifiList){
-
             wifiManager.startScan();
-
         }
 
         if (wifiToConnectTo != null && connectToWifi){

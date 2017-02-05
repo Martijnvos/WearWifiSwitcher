@@ -16,7 +16,7 @@
     <string name="textview_home_network_id_title">Network ID:</string>
     <string name="textview_home_signal_strength_title">Signal Strength:</string>
     <string name="textview_home_wifi_frequency_title">Frequency:</string>
-    <string name="textview_home_not_connected">Not connected</string>
+    <string name="textview_home_unknown">Unknown</string>
     <string name="textview_home_connection_information">Connection Info</string>
     <string name="textview_home_link_speed_loaded">%1$d Mbps</string>
     <string name="textview_home_signal_strength_loaded">%1$d dBm</string>

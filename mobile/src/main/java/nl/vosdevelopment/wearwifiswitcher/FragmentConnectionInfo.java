@@ -32,7 +32,7 @@ public class FragmentConnectionInfo extends Fragment {
     public static final String ACTION_SSIDMAC_RECEIVER = "nl.vosdevelopment.wearwifiswitcher.SSIDMAC_RECEIVER";
 
     TextView currentlyConnected, currentMACAddress, currentIPAddress, currentLinkSpeed, currentNetworkID, currentSignalStrength, currentWifiFrequency;
-    int wifiNetworkID, wifiLinkSpeed, wifiSignalStrength;
+    int wifiLinkSpeed, wifiSignalStrength;
     String ipAddressString, wifiSSID;
 
     Timer timer;
@@ -50,7 +50,6 @@ public class FragmentConnectionInfo extends Fragment {
         currentMACAddress = (TextView) inflatedView.findViewById(R.id.current_mac_address_textview);
         currentIPAddress = (TextView) inflatedView.findViewById(R.id.current_ip_address_textview);
         currentLinkSpeed = (TextView) inflatedView.findViewById(R.id.current_link_speed_textview);
-        currentNetworkID = (TextView) inflatedView.findViewById(R.id.current_network_id_textview);
         currentSignalStrength = (TextView) inflatedView.findViewById(R.id.current_signal_strength_textview);
         currentWifiFrequency = (TextView) inflatedView.findViewById(R.id.current_wifi_frequency_textview);
 
@@ -90,7 +89,6 @@ public class FragmentConnectionInfo extends Fragment {
         }
 
         wifiLinkSpeed = wifiInfo.getLinkSpeed();
-        wifiNetworkID = wifiInfo.getNetworkId();
         wifiSignalStrength = wifiInfo.getRssi();
         int IP = wifiInfo.getIpAddress();
 
@@ -122,10 +120,6 @@ public class FragmentConnectionInfo extends Fragment {
         if(wifiLinkSpeed != 0) {
             Resources res = getResources();
             currentLinkSpeed.setText(String.format(res.getString(R.string.textview_home_link_speed_loaded), wifiLinkSpeed));
-        }
-
-        if (wifiNetworkID != 0) {
-            currentNetworkID.setText(String.valueOf(wifiNetworkID));
         }
 
         if (wifiSignalStrength != 0) {

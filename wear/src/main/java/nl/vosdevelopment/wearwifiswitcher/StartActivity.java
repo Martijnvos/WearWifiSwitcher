@@ -28,6 +28,9 @@ import com.google.android.gms.wearable.Node;
 import com.google.android.gms.wearable.NodeApi;
 import com.google.android.gms.wearable.Wearable;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
 public class StartActivity extends WearableActivity implements WearableListView.ClickListener, DataApi.DataListener,
                                                                 MessageApi.MessageListener,
                                                                 GoogleApiClient.ConnectionCallbacks,
@@ -149,21 +152,26 @@ public class StartActivity extends WearableActivity implements WearableListView.
         for (DataEvent event : dataEvents) {
             if (event.getType() == DataEvent.TYPE_CHANGED) {
                 DataItem item = event.getDataItem();
-                if (item.getUri().getPath().compareTo("/WIFILIST") == 0) {
-                    DataMap dataMap = DataMapItem.fromDataItem(item).getDataMap();
-                    if (!dataMap.isEmpty()){
-                        wifiSSIDs = dataMap.getStringArray("WifiList");
-                        setupListView();
-                    }else {
-                        Toast.makeText(StartActivity.this, "Could not receive Access Points", Toast.LENGTH_SHORT).show();
-                    }
-                }
-
                 if (item.getUri().getPath().compareTo("/WIFI_LIST_RESPONSE") == 0) {
                     DataMap dataMap = DataMapItem.fromDataItem(item).getDataMap();
                     if (!dataMap.isEmpty()){
-                        wifiSSIDs = dataMap.getStringArray("WifiListResponse");
+                        ArrayList<String> wifiNearbyArrayList = dataMap.getStringArrayList("WifiListResponse");
+
+                        Iterator<String> iter = wifiNearbyArrayList.iterator();
+                        while (iter.hasNext()) {
+                            String wifiNearby = iter.next();
+
+                            if (wifiNearby.contains("Extra"))
+                                iter.remove();
+                        }
+
+                        Log.v("WifiNearbyArrayList", wifiNearbyArrayList.toString());
+
+                        wifiSSIDs = wifiNearbyArrayList.toArray(new String[wifiNearbyArrayList.size()]);
+
                         setupListView();
+                    } else {
+                        Toast.makeText(StartActivity.this, "Could not receive Access Points", Toast.LENGTH_SHORT).show();
                     }
                 }
             } else if (event.getType() == DataEvent.TYPE_DELETED) {

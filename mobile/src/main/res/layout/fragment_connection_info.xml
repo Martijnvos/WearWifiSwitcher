@@ -63,7 +63,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/currently_connected_textview"
-                    android:text="@string/textview_home_not_connected"
+                    android:text="@string/textview_home_unknown"
                     android:padding="8dp"
                     android:textSize="14sp" />
             </TableRow>
@@ -80,7 +80,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/textview_home_not_connected"
+                    android:text="@string/textview_home_unknown"
                     android:padding="8dp"
                     android:textSize="14sp"
                     android:id="@+id/current_mac_address_textview"/>
@@ -98,7 +98,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/textview_home_not_connected"
+                    android:text="@string/textview_home_unknown"
                     android:padding="8dp"
                     android:textSize="14sp"
                     android:id="@+id/current_ip_address_textview"/>
@@ -116,28 +116,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/textview_home_not_connected"
+                    android:text="@string/textview_home_unknown"
                     android:padding="8dp"
                     android:textSize="14sp"
                     android:id="@+id/current_link_speed_textview"/>
-            </TableRow>
-
-            <TableRow>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/textview_home_network_id_title"
-                    android:padding="8dp"
-                    android:textSize="16sp"
-                    android:textColor="@android:color/black"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/textview_home_not_connected"
-                    android:padding="8dp"
-                    android:textSize="14sp"
-                    android:id="@+id/current_network_id_textview"/>
             </TableRow>
 
             <TableRow>
@@ -152,7 +134,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/textview_home_not_connected"
+                    android:text="@string/textview_home_unknown"
                     android:padding="8dp"
                     android:textSize="14sp"
                     android:id="@+id/current_signal_strength_textview"/>
@@ -171,7 +153,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/textview_home_not_connected"
+                    android:text="@string/textview_home_unknown"
                     android:padding="8dp"
                     android:textSize="14sp"
                     android:id="@+id/current_wifi_frequency_textview"/>
