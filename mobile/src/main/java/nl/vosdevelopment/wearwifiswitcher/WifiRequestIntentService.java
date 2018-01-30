@@ -49,7 +49,7 @@ public class WifiRequestIntentService extends IntentService {
 
         mGoogleApiClient.connect();
 
-        wifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+        wifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
         wifiManager.setWifiEnabled(true);
     }
 

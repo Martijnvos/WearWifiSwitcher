@@ -17,3 +17,8 @@
 #}
 
 -dontwarn com.roughike.bottombar.**
+
+-dontwarn android.app.NotificationChannel
+-dontwarn android.app.NotificationManager
+-dontwarn android.app.Notification$Builder
+-dontwarn android.content.pm.PackageManager

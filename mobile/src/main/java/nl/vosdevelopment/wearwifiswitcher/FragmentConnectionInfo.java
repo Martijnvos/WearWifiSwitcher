@@ -53,7 +53,7 @@ public class FragmentConnectionInfo extends Fragment {
         currentSignalStrength = (TextView) inflatedView.findViewById(R.id.current_signal_strength_textview);
         currentWifiFrequency = (TextView) inflatedView.findViewById(R.id.current_wifi_frequency_textview);
 
-        wifiManager = (WifiManager) this.getActivity().getSystemService(Context.WIFI_SERVICE);
+        wifiManager = (WifiManager) this.getActivity().getApplicationContext().getSystemService(Context.WIFI_SERVICE);
         wifiInfo = wifiManager.getConnectionInfo();
 
         mAdView = (AdView) inflatedView.findViewById(R.id.adView);

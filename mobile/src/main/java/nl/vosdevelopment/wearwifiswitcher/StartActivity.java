@@ -59,7 +59,7 @@ public class StartActivity extends AppCompatActivity {
         setupBottomBar();
 
         relativeLayout = (RelativeLayout) findViewById(R.id.relativeLayout);
-        wifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+        wifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
         assetManager = this.getAssets();
 
         MobileAds.initialize(getApplicationContext(), "ADS KEY");

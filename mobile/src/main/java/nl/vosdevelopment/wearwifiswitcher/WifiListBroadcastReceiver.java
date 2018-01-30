@@ -30,7 +30,7 @@ public class WifiListBroadcastReceiver extends BroadcastReceiver{
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        WifiManager wifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
+        WifiManager wifiManager = (WifiManager) context.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
 
         mGoogleApiClient = new GoogleApiClient.Builder(context)
                 .addApi(Wearable.API)
@@ -39,17 +39,20 @@ public class WifiListBroadcastReceiver extends BroadcastReceiver{
         mGoogleApiClient.connect();
         wifiConfigured.clear();
 
-        List<ScanResult> wifiList = wifiManager.getScanResults();
+        List<ScanResult> wifiList = null;
+        if (wifiManager != null) {
+            wifiList = wifiManager.getScanResults();
 
-        //Get configured networks and put their SSID's into the wifiConfigured array for later reference
-        List<WifiConfiguration> wifiConfiguredList = wifiManager.getConfiguredNetworks();
-        for (WifiConfiguration wifiConfig : wifiConfiguredList) {
-            wifiConfigured.add(wifiConfig.SSID.replace("\"", ""));
+            //Get configured networks and put their SSID's into the wifiConfigured array for later reference
+            List<WifiConfiguration> wifiConfiguredList = wifiManager.getConfiguredNetworks();
+            for (WifiConfiguration wifiConfig : wifiConfiguredList) {
+                wifiConfigured.add(wifiConfig.SSID.replace("\"", ""));
+            }
         }
 
         wifiNearbyArrayList = new ArrayList<>();
 
-        if (wifiList.size() > 0) {
+        if (wifiList != null && wifiList.size() > 0) {
             for(int i = 0; i< wifiList.size(); i++) {
                 String wifiSSIDFromList = wifiList.get(i).SSID;
 
