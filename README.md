@@ -5,7 +5,9 @@ This repository contains both the phone and watch variants of the application.
 The phone application contains a nice overview of the network you are currently connected to.
 This shows information like SSID, MAC address, IP address and signal strength.
 
-![WearWifiSwitcher Connection Page](images/screenshot_connection_info.png "Connection page")
+Connection Info                                                            |  Interval options
+:--------------------------------------------------------------------------:|:---------------------------------------------------------------------:
+![WearWifiSwitcher Connection Page](images/screenshot_connection_info.png)  |  ![WearWifiSwitcher Interval Option](/images/screenshot_intervals.png)
 
 ## Running the application(s)
 To run this app you can clone the repository and open the project in Android Studio.  
