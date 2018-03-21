@@ -11,11 +11,11 @@ Connection Info                                                             |  I
 
 The wear application contains functionality for switching Wifi networks on your phone via your watch.  
 When opening the application it searches for the current wifi networks nearby.  
-You'll get a message corresponding to the status when selecting a network to connect to.  
+You'll get a message corresponding to the status when selecting a network to connect to.
 
-Watch Networks                                                        |  Connection Succeeded
-:------------------------------------------------------------------- :|:----------------------------------------------------------------------:
-![WearWifiSwitcher Watch Networks](images/screen_watch_networks.png)  |  ![WearWifiSwitcher Watch Connected](images/screen_watch_connected.png)
+Watch Networks                                                       |  Connection Succeeded
+:-------------------------------------------------------------------:|:----------------------------------------------------------------------:
+![WearWifiSwitcher Watch Networks](images/screen_watch_networks.png) |  ![WearWifiSwitcher Watch Connected](images/screen_watch_connected.png)
 
 ## Running the application(s)
 To run this app you can clone the repository and open the project in Android Studio.  
